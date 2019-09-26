@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MobileWaiter_CS481" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tnW-EM-gVQ">
+                                <rect key="frame" x="154.5" y="413" width="105" height="70.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Waiter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-9R-p0n">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-U2-xds">
+                                        <rect key="frame" x="33.5" y="40.5" width="38" height="30"/>
+                                        <state key="normal" title="LogIn"/>
+                                        <connections>
+                                            <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROa-sA-nTi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tnW-EM-gVQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2Wz-lw-NFg"/>
+                            <constraint firstItem="tnW-EM-gVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uXg-bw-Hvz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LogInButton" destination="gwX-U2-xds" id="Wev-Ig-oOz"/>
+                        <segue destination="WqB-UH-qdK" kind="show" identifier="goHome" id="dJ4-XM-Qzw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="90.401785714285708"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="5xq-9U-qmO">
+            <objects>
+                <viewController id="WqB-UH-qdK" customClass="HomeViewController" customModule="MobileWaiter_CS481" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fMI-ZZ-Sz4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-W3-8Eh">
+                                <rect key="frame" x="130.5" y="359" width="153.5" height="124.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQQ-P2-y9K">
+                                        <rect key="frame" x="41" y="0.0" width="71" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Restaurant ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-Gk-wnv">
+                                        <rect key="frame" x="0.0" y="40.5" width="153.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UB-9T-SPX">
+                                        <rect key="frame" x="58" y="94.5" width="37" height="30"/>
+                                        <state key="normal" title="Enter"/>
+                                        <connections>
+                                            <action selector="goNextTapped:" destination="WqB-UH-qdK" eventType="touchUpInside" id="Yoi-RH-1c8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RbP-W3-8Eh" firstAttribute="centerY" secondItem="fMI-ZZ-Sz4" secondAttribute="centerY" id="lQm-d7-s3g"/>
+                            <constraint firstItem="RbP-W3-8Eh" firstAttribute="centerX" secondItem="fMI-ZZ-Sz4" secondAttribute="centerX" id="spg-Xi-adM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qCX-nk-9Ce"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="izz-YP-qCG"/>
+                    <connections>
+                        <segue destination="tdq-uj-9US" kind="show" identifier="goTest" id="PJS-1U-VE1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBr-TL-OYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="90"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="eXt-df-Itm">
+            <objects>
+                <viewController id="Btd-qS-CIt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZoQ-Pn-EPb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="weQ-fd-BjJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu" image="MenuIcon" id="HNb-7n-Dw3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0q-ov-XE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="1714"/>
+        </scene>
+        <!--Check Out-->
+        <scene sceneID="4Kt-9y-nSV">
+            <objects>
+                <viewController id="j8C-4b-RZN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nbo-E8-aAP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bbA-tC-hnk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Check Out" image="checkOutIcon" id="Vhg-Y5-fUU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shQ-Xc-aoy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="1714"/>
+        </scene>
+        <!--My Account-->
+        <scene sceneID="nKF-7f-g1y">
+            <objects>
+                <viewController id="Rku-Y6-d2r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ahe-II-GZf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="clZ-hq-63B"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Account" image="myAccountIcon" id="SPU-u7-v6h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7D-vl-akF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2713" y="1714"/>
+        </scene>
+        <!--Restaurant-->
+        <scene sceneID="UUm-3R-iz3">
+            <objects>
+                <viewController id="Vay-cE-zad" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fX-wa-TrW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-sR-H4G">
+                                <rect key="frame" x="163" y="380" width="88" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owS-QN-mZM">
+                                        <rect key="frame" x="11" y="0.0" width="66" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Check-In"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZD-Sk-b3K">
+                                        <rect key="frame" x="0.0" y="52" width="88" height="30"/>
+                                        <state key="normal" title="Vacate Table"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vCA-sR-H4G" firstAttribute="centerY" secondItem="5fX-wa-TrW" secondAttribute="centerY" id="Jhn-sF-a5c"/>
+                            <constraint firstItem="vCA-sR-H4G" firstAttribute="centerX" secondItem="5fX-wa-TrW" secondAttribute="centerX" id="aw7-sQ-jSd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pM6-1X-VPQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Restaurant" image="RestaurantIcon" id="lbe-Vk-SCb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCN-0f-jI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="1714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fUm-uH-43F">
+            <objects>
+                <tabBarController id="tdq-uj-9US" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0lW-rW-FRq"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mZo-bA-KQX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Vay-cE-zad" kind="relationship" relationship="viewControllers" id="FTA-Uc-XWf"/>
+                        <segue destination="Btd-qS-CIt" kind="relationship" relationship="viewControllers" id="rsE-yx-4YX"/>
+                        <segue destination="j8C-4b-RZN" kind="relationship" relationship="viewControllers" id="fBG-Yf-F03"/>
+                        <segue destination="Rku-Y6-d2r" kind="relationship" relationship="viewControllers" id="3zX-Kf-geb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPp-1J-LwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="848"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MenuIcon" width="30" height="30"/>
+        <image name="RestaurantIcon" width="30" height="30"/>
+        <image name="checkOutIcon" width="30" height="30"/>
+        <image name="myAccountIcon" width="30" height="30"/>
+    </resources>
+</document>

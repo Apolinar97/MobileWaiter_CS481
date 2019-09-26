@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53FE527381A4EF3BEEE90B36 /* Pods_MobileWaiter_CS481.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AE6F51AA103DA05E65ED2D /* Pods_MobileWaiter_CS481.framework */; };
+		6B65A00966DFD1EA3FAFEC6A /* Pods_MobileWaiter_CS481UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA59F583FF03620A51C9013 /* Pods_MobileWaiter_CS481UITests.framework */; };
+		7BF483821BA6A426F7D87097 /* Pods_MobileWaiter_CS481Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7FEE559431AC32A63D2C54 /* Pods_MobileWaiter_CS481Tests.framework */; };
 		EE5463A323382CC1003F29F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463A223382CC1003F29F1 /* AppDelegate.swift */; };
 		EE5463A523382CC1003F29F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463A423382CC1003F29F1 /* SceneDelegate.swift */; };
 		EE5463A723382CC1003F29F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463A623382CC1003F29F1 /* ViewController.swift */; };
@@ -15,6 +18,16 @@
 		EE5463AF23382CC2003F29F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5463AD23382CC2003F29F1 /* LaunchScreen.storyboard */; };
 		EE5463BA23382CC2003F29F1 /* MobileWaiter_CS481Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463B923382CC2003F29F1 /* MobileWaiter_CS481Tests.swift */; };
 		EE5463C523382CC2003F29F1 /* MobileWaiter_CS481UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463C423382CC2003F29F1 /* MobileWaiter_CS481UITests.swift */; };
+		EE5463D323382D63003F29F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5463D223382D62003F29F1 /* GoogleService-Info.plist */; };
+		EE5463D423382D63003F29F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5463D223382D62003F29F1 /* GoogleService-Info.plist */; };
+		EE5463D523382D63003F29F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5463D223382D62003F29F1 /* GoogleService-Info.plist */; };
+		EEA0A9252339A76D0012E94D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A9242339A76D0012E94D /* User.swift */; };
+		EEA0A9272339AB2A0012E94D /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A9262339AB2A0012E94D /* Restaurant.swift */; };
+		EEA0A9292339AFD50012E94D /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A9282339AFD40012E94D /* Table.swift */; };
+		EEA0A92B2339B1BD0012E94D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A92A2339B1BD0012E94D /* MenuItem.swift */; };
+		EEA0A92D2339B5150012E94D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A92C2339B5150012E94D /* Menu.swift */; };
+		EED80D17233845BE000604AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED80D16233845BE000604AE /* HomeViewController.swift */; };
+		EED80D1A233860FC000604AE /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED80D19233860FC000604AE /* TabMenu.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CED4D0835738402D198C3DD /* Pods-MobileWaiter_CS481UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWaiter_CS481UITests.debug.xcconfig"; path = "Target Support Files/Pods-MobileWaiter_CS481UITests/Pods-MobileWaiter_CS481UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2014E6DDD795F6325A651265 /* Pods-MobileWaiter_CS481.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWaiter_CS481.release.xcconfig"; path = "Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481.release.xcconfig"; sourceTree = "<group>"; };
+		373BDFD98D461696DAD0EE9D /* Pods-MobileWaiter_CS481.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWaiter_CS481.debug.xcconfig"; path = "Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481.debug.xcconfig"; sourceTree = "<group>"; };
+		4CF2048DACE631CA0F6E3DD8 /* Pods-MobileWaiter_CS481Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWaiter_CS481Tests.debug.xcconfig"; path = "Target Support Files/Pods-MobileWaiter_CS481Tests/Pods-MobileWaiter_CS481Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		543AF9027E74382C5821BAD8 /* Pods-MobileWaiter_CS481UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWaiter_CS481UITests.release.xcconfig"; path = "Target Support Files/Pods-MobileWaiter_CS481UITests/Pods-MobileWaiter_CS481UITests.release.xcconfig"; sourceTree = "<group>"; };
+		7DA59F583FF03620A51C9013 /* Pods_MobileWaiter_CS481UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWaiter_CS481UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8AE6F51AA103DA05E65ED2D /* Pods_MobileWaiter_CS481.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWaiter_CS481.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC67747D33F821B317E20EF2 /* Pods-MobileWaiter_CS481Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWaiter_CS481Tests.release.xcconfig"; path = "Target Support Files/Pods-MobileWaiter_CS481Tests/Pods-MobileWaiter_CS481Tests.release.xcconfig"; sourceTree = "<group>"; };
+		EC7FEE559431AC32A63D2C54 /* Pods_MobileWaiter_CS481Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWaiter_CS481Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE54639F23382CC1003F29F1 /* MobileWaiter_CS481.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileWaiter_CS481.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5463A223382CC1003F29F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE5463A423382CC1003F29F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +71,14 @@
 		EE5463C023382CC2003F29F1 /* MobileWaiter_CS481UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileWaiter_CS481UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5463C423382CC2003F29F1 /* MobileWaiter_CS481UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWaiter_CS481UITests.swift; sourceTree = "<group>"; };
 		EE5463C623382CC2003F29F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE5463D223382D62003F29F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEA0A9242339A76D0012E94D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EEA0A9262339AB2A0012E94D /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		EEA0A9282339AFD40012E94D /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		EEA0A92A2339B1BD0012E94D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		EEA0A92C2339B5150012E94D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		EED80D16233845BE000604AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EED80D19233860FC000604AE /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53FE527381A4EF3BEEE90B36 /* Pods_MobileWaiter_CS481.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF483821BA6A426F7D87097 /* Pods_MobileWaiter_CS481Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B65A00966DFD1EA3FAFEC6A /* Pods_MobileWaiter_CS481UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B0BC8436627FE7A25CF6437 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				373BDFD98D461696DAD0EE9D /* Pods-MobileWaiter_CS481.debug.xcconfig */,
+				2014E6DDD795F6325A651265 /* Pods-MobileWaiter_CS481.release.xcconfig */,
+				4CF2048DACE631CA0F6E3DD8 /* Pods-MobileWaiter_CS481Tests.debug.xcconfig */,
+				EC67747D33F821B317E20EF2 /* Pods-MobileWaiter_CS481Tests.release.xcconfig */,
+				0CED4D0835738402D198C3DD /* Pods-MobileWaiter_CS481UITests.debug.xcconfig */,
+				543AF9027E74382C5821BAD8 /* Pods-MobileWaiter_CS481UITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA15F091EA297E853063D0F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8AE6F51AA103DA05E65ED2D /* Pods_MobileWaiter_CS481.framework */,
+				EC7FEE559431AC32A63D2C54 /* Pods_MobileWaiter_CS481Tests.framework */,
+				7DA59F583FF03620A51C9013 /* Pods_MobileWaiter_CS481UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE54639623382CC1003F29F1 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +139,8 @@
 				EE5463B823382CC2003F29F1 /* MobileWaiter_CS481Tests */,
 				EE5463C323382CC2003F29F1 /* MobileWaiter_CS481UITests */,
 				EE5463A023382CC1003F29F1 /* Products */,
+				6B0BC8436627FE7A25CF6437 /* Pods */,
+				CA15F091EA297E853063D0F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +157,14 @@
 		EE5463A123382CC1003F29F1 /* MobileWaiter_CS481 */ = {
 			isa = PBXGroup;
 			children = (
+				EEA0A9232339A6A50012E94D /* Models */,
+				EED80D1823386078000604AE /* StoryBoards */,
 				EE5463A223382CC1003F29F1 /* AppDelegate.swift */,
+				EED80D16233845BE000604AE /* HomeViewController.swift */,
 				EE5463A423382CC1003F29F1 /* SceneDelegate.swift */,
 				EE5463A623382CC1003F29F1 /* ViewController.swift */,
-				EE5463A823382CC1003F29F1 /* Main.storyboard */,
 				EE5463AB23382CC2003F29F1 /* Assets.xcassets */,
-				EE5463AD23382CC2003F29F1 /* LaunchScreen.storyboard */,
+				EE5463D223382D62003F29F1 /* GoogleService-Info.plist */,
 				EE5463B023382CC2003F29F1 /* Info.plist */,
 			);
 			path = MobileWaiter_CS481;
@@ -128,6 +188,28 @@
 			path = MobileWaiter_CS481UITests;
 			sourceTree = "<group>";
 		};
+		EEA0A9232339A6A50012E94D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEA0A9242339A76D0012E94D /* User.swift */,
+				EEA0A9262339AB2A0012E94D /* Restaurant.swift */,
+				EEA0A9282339AFD40012E94D /* Table.swift */,
+				EEA0A92A2339B1BD0012E94D /* MenuItem.swift */,
+				EEA0A92C2339B5150012E94D /* Menu.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EED80D1823386078000604AE /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				EE5463A823382CC1003F29F1 /* Main.storyboard */,
+				EED80D19233860FC000604AE /* TabMenu.storyboard */,
+				EE5463AD23382CC2003F29F1 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE5463C923382CC2003F29F1 /* Build configuration list for PBXNativeTarget "MobileWaiter_CS481" */;
 			buildPhases = (
+				4693CB6C918EF5A872631807 /* [CP] Check Pods Manifest.lock */,
 				EE54639B23382CC1003F29F1 /* Sources */,
 				EE54639C23382CC1003F29F1 /* Frameworks */,
 				EE54639D23382CC1003F29F1 /* Resources */,
+				CDDE910E18B6C5930FE593A3 /* [CP] Embed Pods Frameworks */,
+				B4A0A11BD4BC86BCFE5A3577 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE5463CC23382CC2003F29F1 /* Build configuration list for PBXNativeTarget "MobileWaiter_CS481Tests" */;
 			buildPhases = (
+				654BBBBC33F1E068ABBC01B9 /* [CP] Check Pods Manifest.lock */,
 				EE5463B123382CC2003F29F1 /* Sources */,
 				EE5463B223382CC2003F29F1 /* Frameworks */,
 				EE5463B323382CC2003F29F1 /* Resources */,
@@ -170,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE5463CF23382CC2003F29F1 /* Build configuration list for PBXNativeTarget "MobileWaiter_CS481UITests" */;
 			buildPhases = (
+				B472CA48AD7B0FD0448EAC35 /* [CP] Check Pods Manifest.lock */,
 				EE5463BC23382CC2003F29F1 /* Sources */,
 				EE5463BD23382CC2003F29F1 /* Frameworks */,
 				EE5463BE23382CC2003F29F1 /* Resources */,
@@ -233,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE5463AF23382CC2003F29F1 /* LaunchScreen.storyboard in Resources */,
+				EE5463D323382D63003F29F1 /* GoogleService-Info.plist in Resources */,
+				EED80D1A233860FC000604AE /* TabMenu.storyboard in Resources */,
 				EE5463AC23382CC2003F29F1 /* Assets.xcassets in Resources */,
 				EE5463AA23382CC1003F29F1 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5463D423382D63003F29F1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +339,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5463D523382D63003F29F1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4693CB6C918EF5A872631807 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileWaiter_CS481-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		654BBBBC33F1E068ABBC01B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileWaiter_CS481Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B472CA48AD7B0FD0448EAC35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileWaiter_CS481UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4A0A11BD4BC86BCFE5A3577 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDDE910E18B6C5930FE593A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileWaiter_CS481/Pods-MobileWaiter_CS481-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE54639B23382CC1003F29F1 /* Sources */ = {
@@ -260,8 +454,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE5463A723382CC1003F29F1 /* ViewController.swift in Sources */,
+				EEA0A9292339AFD50012E94D /* Table.swift in Sources */,
 				EE5463A323382CC1003F29F1 /* AppDelegate.swift in Sources */,
+				EEA0A9272339AB2A0012E94D /* Restaurant.swift in Sources */,
 				EE5463A523382CC1003F29F1 /* SceneDelegate.swift in Sources */,
+				EEA0A92B2339B1BD0012E94D /* MenuItem.swift in Sources */,
+				EEA0A92D2339B5150012E94D /* Menu.swift in Sources */,
+				EEA0A9252339A76D0012E94D /* User.swift in Sources */,
+				EED80D17233845BE000604AE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +632,7 @@
 		};
 		EE5463CA23382CC2003F29F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 373BDFD98D461696DAD0EE9D /* Pods-MobileWaiter_CS481.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +651,7 @@
 		};
 		EE5463CB23382CC2003F29F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2014E6DDD795F6325A651265 /* Pods-MobileWaiter_CS481.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +670,7 @@
 		};
 		EE5463CD23382CC2003F29F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CF2048DACE631CA0F6E3DD8 /* Pods-MobileWaiter_CS481Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +693,7 @@
 		};
 		EE5463CE23382CC2003F29F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC67747D33F821B317E20EF2 /* Pods-MobileWaiter_CS481Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +716,7 @@
 		};
 		EE5463D023382CC2003F29F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CED4D0835738402D198C3DD /* Pods-MobileWaiter_CS481UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +737,7 @@
 		};
 		EE5463D123382CC2003F29F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 543AF9027E74382C5821BAD8 /* Pods-MobileWaiter_CS481UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

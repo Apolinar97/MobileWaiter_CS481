@@ -1,0 +1,6 @@
+framework module Pods_MobileWaiter_CS481UITests {
+  umbrella header "Pods-MobileWaiter_CS481UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
