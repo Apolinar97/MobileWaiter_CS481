@@ -26,6 +26,8 @@
 		EEA0A9292339AFD50012E94D /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A9282339AFD40012E94D /* Table.swift */; };
 		EEA0A92B2339B1BD0012E94D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A92A2339B1BD0012E94D /* MenuItem.swift */; };
 		EEA0A92D2339B5150012E94D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A92C2339B5150012E94D /* Menu.swift */; };
+		EEA0A92F23432BAC0012E94D /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A92E23432BAC0012E94D /* RestaurantController.swift */; };
+		EEA0A933234331A50012E94D /* TabHeadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A932234331A50012E94D /* TabHeadController.swift */; };
 		EED80D17233845BE000604AE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED80D16233845BE000604AE /* HomeViewController.swift */; };
 		EED80D1A233860FC000604AE /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED80D19233860FC000604AE /* TabMenu.storyboard */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,8 @@
 		EEA0A9282339AFD40012E94D /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		EEA0A92A2339B1BD0012E94D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		EEA0A92C2339B5150012E94D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		EEA0A92E23432BAC0012E94D /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		EEA0A932234331A50012E94D /* TabHeadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeadController.swift; sourceTree = "<group>"; };
 		EED80D16233845BE000604AE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EED80D19233860FC000604AE /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,11 +165,13 @@
 				EED80D1823386078000604AE /* StoryBoards */,
 				EE5463A223382CC1003F29F1 /* AppDelegate.swift */,
 				EED80D16233845BE000604AE /* HomeViewController.swift */,
+				EEA0A92E23432BAC0012E94D /* RestaurantController.swift */,
 				EE5463A423382CC1003F29F1 /* SceneDelegate.swift */,
 				EE5463A623382CC1003F29F1 /* ViewController.swift */,
 				EE5463AB23382CC2003F29F1 /* Assets.xcassets */,
 				EE5463D223382D62003F29F1 /* GoogleService-Info.plist */,
 				EE5463B023382CC2003F29F1 /* Info.plist */,
+				EEA0A932234331A50012E94D /* TabHeadController.swift */,
 			);
 			path = MobileWaiter_CS481;
 			sourceTree = "<group>";
@@ -457,11 +463,13 @@
 				EEA0A9292339AFD50012E94D /* Table.swift in Sources */,
 				EE5463A323382CC1003F29F1 /* AppDelegate.swift in Sources */,
 				EEA0A9272339AB2A0012E94D /* Restaurant.swift in Sources */,
+				EEA0A92F23432BAC0012E94D /* RestaurantController.swift in Sources */,
 				EE5463A523382CC1003F29F1 /* SceneDelegate.swift in Sources */,
 				EEA0A92B2339B1BD0012E94D /* MenuItem.swift in Sources */,
 				EEA0A92D2339B5150012E94D /* Menu.swift in Sources */,
 				EEA0A9252339A76D0012E94D /* User.swift in Sources */,
 				EED80D17233845BE000604AE /* HomeViewController.swift in Sources */,
+				EEA0A933234331A50012E94D /* TabHeadController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

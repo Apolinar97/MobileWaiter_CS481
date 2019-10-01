@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RbP-W3-8Eh">
-                                <rect key="frame" x="130.5" y="359" width="153.5" height="124.5"/>
+                                <rect key="frame" x="130.5" y="337.5" width="153.5" height="167"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQQ-P2-y9K">
                                         <rect key="frame" x="41" y="0.0" width="71" height="20.5"/>
@@ -67,13 +67,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Restaurant ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-Gk-wnv">
-                                        <rect key="frame" x="0.0" y="40.5" width="153.5" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Restaurant ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-Gk-wnv">
+                                        <rect key="frame" x="0.0" y="40.5" width="153.5" height="76.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UB-9T-SPX">
-                                        <rect key="frame" x="58" y="94.5" width="37" height="30"/>
+                                        <rect key="frame" x="58" y="137" width="37" height="30"/>
                                         <state key="normal" title="Enter"/>
                                         <connections>
                                             <action selector="goNextTapped:" destination="WqB-UH-qdK" eventType="touchUpInside" id="Yoi-RH-1c8"/>
@@ -81,22 +81,34 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ash-TK-O96" userLabel="errorLabel">
+                                <rect key="frame" x="43" y="758" width="124" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Ash-TK-O96" firstAttribute="leading" secondItem="qCX-nk-9Ce" secondAttribute="leading" constant="43" id="6cb-fo-pNP"/>
+                            <constraint firstItem="Ash-TK-O96" firstAttribute="top" secondItem="RbP-W3-8Eh" secondAttribute="bottom" constant="253.5" id="ASb-Br-7XV"/>
+                            <constraint firstItem="qCX-nk-9Ce" firstAttribute="bottom" secondItem="Ash-TK-O96" secondAttribute="bottom" constant="50" id="GHn-hZ-Z3o"/>
                             <constraint firstItem="RbP-W3-8Eh" firstAttribute="centerY" secondItem="fMI-ZZ-Sz4" secondAttribute="centerY" id="lQm-d7-s3g"/>
+                            <constraint firstItem="qCX-nk-9Ce" firstAttribute="trailing" secondItem="Ash-TK-O96" secondAttribute="trailing" constant="247" id="meq-HA-et3"/>
                             <constraint firstItem="RbP-W3-8Eh" firstAttribute="centerX" secondItem="fMI-ZZ-Sz4" secondAttribute="centerX" id="spg-Xi-adM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qCX-nk-9Ce"/>
                     </view>
                     <navigationItem key="navigationItem" id="izz-YP-qCG"/>
                     <connections>
+                        <outlet property="IDTextField" destination="JQG-Gk-wnv" id="UrS-zE-tqH"/>
+                        <outlet property="errorLabel" destination="Ash-TK-O96" id="Huh-YP-iGU"/>
                         <segue destination="tdq-uj-9US" kind="show" identifier="goTest" id="PJS-1U-VE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBr-TL-OYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="90"/>
+            <point key="canvasLocation" x="947.82608695652186" y="89.732142857142847"/>
         </scene>
         <!--Menu-->
         <scene sceneID="eXt-df-Itm">
@@ -112,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0q-ov-XE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="1714"/>
+            <point key="canvasLocation" x="947.82608695652186" y="1713.6160714285713"/>
         </scene>
         <!--Check Out-->
         <scene sceneID="4Kt-9y-nSV">
@@ -149,7 +161,7 @@
         <!--Restaurant-->
         <scene sceneID="UUm-3R-iz3">
             <objects>
-                <viewController id="Vay-cE-zad" sceneMemberID="viewController">
+                <viewController id="Vay-cE-zad" customClass="RestaurantController" customModule="MobileWaiter_CS481" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5fX-wa-TrW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,24 +180,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dummy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSP-KW-WuI" userLabel="restaurantNameLabel">
+                                <rect key="frame" x="20" y="20" width="116" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="rSP-KW-WuI" firstAttribute="leading" secondItem="pM6-1X-VPQ" secondAttribute="leading" constant="20" id="6oC-UF-w7U"/>
+                            <constraint firstItem="pM6-1X-VPQ" firstAttribute="trailing" secondItem="rSP-KW-WuI" secondAttribute="trailing" constant="278" id="G4A-kh-13y"/>
                             <constraint firstItem="vCA-sR-H4G" firstAttribute="centerY" secondItem="5fX-wa-TrW" secondAttribute="centerY" id="Jhn-sF-a5c"/>
                             <constraint firstItem="vCA-sR-H4G" firstAttribute="centerX" secondItem="5fX-wa-TrW" secondAttribute="centerX" id="aw7-sQ-jSd"/>
+                            <constraint firstItem="pM6-1X-VPQ" firstAttribute="bottom" secondItem="rSP-KW-WuI" secondAttribute="bottom" constant="698" id="kFw-9i-f5E"/>
+                            <constraint firstItem="rSP-KW-WuI" firstAttribute="top" secondItem="pM6-1X-VPQ" secondAttribute="top" constant="20" id="yk1-Vn-60u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pM6-1X-VPQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Restaurant" image="RestaurantIcon" id="lbe-Vk-SCb"/>
+                    <connections>
+                        <outlet property="restaurantNameLabel" destination="rSP-KW-WuI" id="YW5-SS-drk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCN-0f-jI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="1714"/>
+            <point key="canvasLocation" x="34.782608695652179" y="1713.6160714285713"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Head Controller-->
         <scene sceneID="fUm-uH-43F">
             <objects>
-                <tabBarController id="tdq-uj-9US" sceneMemberID="viewController">
+                <tabBarController id="tdq-uj-9US" customClass="TabHeadController" customModule="MobileWaiter_CS481" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="0lW-rW-FRq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mZo-bA-KQX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

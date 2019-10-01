@@ -10,20 +10,30 @@ import Foundation
 
 class Restaurant {
     var name:String = ""
-    var id:String = ""
+    var id:Int = -1
+    var docID:Int = -1
     var address:String = ""
     var city:String = ""
     var tablesAvailable:Int = -1
     
     
-    init(name:String, id:String, address:String, city:String, tablesAvailable:Int) {
+    init(name:String, id:Int, docID:Int, address:String, city:String, tablesAvailable:Int) {
         self.name = name
         self.id = id
+        self.docID = docID
         self.address = address
         self.city = city
         self.tablesAvailable = tablesAvailable
         
     }
+    
+    init(id:Int, docID:Int, name:String) {
+        self.id = id
+        self.docID = docID
+        self.name = name
+    }
+    
+    init() {}
     
     
 }
