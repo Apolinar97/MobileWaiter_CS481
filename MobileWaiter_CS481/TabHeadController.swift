@@ -7,23 +7,41 @@
 //
 
 import Foundation
+import Firebase
 import UIKit
 
 
 
 class TabHeadController: UITabBarController {
     var restaurantObj:Restaurant?
-
-
+    var menuItems:Array<MenuItem>?
+    
+    let RestVC = RestaurantController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        preparePostSeg()
+        prepareTabs()
         
-    
     }
     
     
-    func preparePostSeg() {
+    func setRestID() -> Int {
+        guard let viewControllers = viewControllers else {
+            return -1
+        }
+        
+        for viewController in viewControllers {
+            if let restaurantViewController = viewController as? RestaurantController {
+                return restaurantViewController.restaurantInstance?.id ?? -1
+            }
+        }
+        return -1
+        
+    }
+    
+    
+    
+    func prepareTabs() {
         guard let viewControllers = viewControllers else {
             return
         }
@@ -32,9 +50,51 @@ class TabHeadController: UITabBarController {
             if let restaurantViewController = viewController as? RestaurantController {
                 restaurantViewController.restaurantInstance = restaurantObj
             }
+            
+            if let menuTableVC = viewController as? MenuTableViewController {
+                prepMenuItems(vc: menuTableVC)
+            }
+            
+        }
+    }
+    
+    func prepMenuItems(vc:MenuTableViewController) {
+        var menuItems = Array<MenuItem>()
+        let menuRef = Firestore.firestore().collection("Menus")
+        menuRef.whereField("RestaurantID", isEqualTo: setRestID()).getDocuments(){ (snapShot,error) in
+            
+            if(error != nil) {
+                print("Error in query")
+                return
+            }
+            
+            else {
+                for document in snapShot!.documents {
+                    let item:MenuItem = MenuItem()
+                    //print("\(document.documentID) => \(document.data())")
+                    item.docID = document.documentID as String
+                    item.MenuID = document.get("MenuID") as! Int
+                    item.restaurantID = document.get("RestaurantID") as! Int
+                    item.itemDescription = document.get("ItemDescription") as! String
+                    item.itemName = document.get("ItemName") as! String
+                    
+                    menuItems.append(item)
+                    
+                }
+                //vc.menuItemsList = menuItems
+                vc.menuItemsList = menuItems
+            }
+            
+            
+            
         }
     }
     
     
     
+    
+    
 }
+
+
+

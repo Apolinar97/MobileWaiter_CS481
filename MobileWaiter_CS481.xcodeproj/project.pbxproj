@@ -21,6 +21,8 @@
 		EE5463D323382D63003F29F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5463D223382D62003F29F1 /* GoogleService-Info.plist */; };
 		EE5463D423382D63003F29F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5463D223382D62003F29F1 /* GoogleService-Info.plist */; };
 		EE5463D523382D63003F29F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE5463D223382D62003F29F1 /* GoogleService-Info.plist */; };
+		EE87C613234C08F9004D386D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C612234C08F9004D386D /* MenuTableViewController.swift */; };
+		EE87C615234D39D3004D386D /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C614234D39D3004D386D /* MenuViewCell.swift */; };
 		EEA0A9252339A76D0012E94D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A9242339A76D0012E94D /* User.swift */; };
 		EEA0A9272339AB2A0012E94D /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A9262339AB2A0012E94D /* Restaurant.swift */; };
 		EEA0A9292339AFD50012E94D /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA0A9282339AFD40012E94D /* Table.swift */; };
@@ -74,6 +76,8 @@
 		EE5463C423382CC2003F29F1 /* MobileWaiter_CS481UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWaiter_CS481UITests.swift; sourceTree = "<group>"; };
 		EE5463C623382CC2003F29F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE5463D223382D62003F29F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE87C612234C08F9004D386D /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		EE87C614234D39D3004D386D /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		EEA0A9242339A76D0012E94D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EEA0A9262339AB2A0012E94D /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		EEA0A9282339AFD40012E94D /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				EE5463D223382D62003F29F1 /* GoogleService-Info.plist */,
 				EE5463B023382CC2003F29F1 /* Info.plist */,
 				EEA0A932234331A50012E94D /* TabHeadController.swift */,
+				EE87C612234C08F9004D386D /* MenuTableViewController.swift */,
+				EE87C614234D39D3004D386D /* MenuViewCell.swift */,
 			);
 			path = MobileWaiter_CS481;
 			sourceTree = "<group>";
@@ -461,7 +467,9 @@
 			files = (
 				EE5463A723382CC1003F29F1 /* ViewController.swift in Sources */,
 				EEA0A9292339AFD50012E94D /* Table.swift in Sources */,
+				EE87C613234C08F9004D386D /* MenuTableViewController.swift in Sources */,
 				EE5463A323382CC1003F29F1 /* AppDelegate.swift in Sources */,
+				EE87C615234D39D3004D386D /* MenuViewCell.swift in Sources */,
 				EEA0A9272339AB2A0012E94D /* Restaurant.swift in Sources */,
 				EEA0A92F23432BAC0012E94D /* RestaurantController.swift in Sources */,
 				EE5463A523382CC1003F29F1 /* SceneDelegate.swift in Sources */,
@@ -646,6 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95YK3494MR;
 				INFOPLIST_FILE = MobileWaiter_CS481/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,6 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95YK3494MR;
 				INFOPLIST_FILE = MobileWaiter_CS481/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

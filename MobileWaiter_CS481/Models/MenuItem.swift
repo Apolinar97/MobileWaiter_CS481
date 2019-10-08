@@ -9,19 +9,21 @@
 import Foundation
 
 class MenuItem {
-    var itemID:String = ""
+    var MenuID:Int = -1
+    var restaurantID:Int = -1
+    var docID:String = ""
     var itemName:String = ""
     var flags:[String] = [String]() //Contains flags such as spicy,
     var itemDescription:String = ""
-    var restaurantID:String = ""
     
-    init(itemID:String, itemName:String,flags:[String], itemDescription:String, restaurantID:String) {
-        self.itemID = itemID
+    init(itemName:String,flags:[String], itemDescription:String, restaurantID:Int, docID:String) {
         self.itemName = itemName
         self.flags = flags
         self.itemDescription = itemDescription
         self.restaurantID = restaurantID
+        self.docID = docID
     }
+    init() {}
     
     
     

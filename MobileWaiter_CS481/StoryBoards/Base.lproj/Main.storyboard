@@ -84,7 +84,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ash-TK-O96" userLabel="errorLabel">
                                 <rect key="frame" x="43" y="758" width="124" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -111,20 +111,33 @@
             <point key="canvasLocation" x="947.82608695652186" y="89.732142857142847"/>
         </scene>
         <!--Menu-->
-        <scene sceneID="eXt-df-Itm">
+        <scene sceneID="vCf-xi-qfE">
             <objects>
-                <viewController id="Btd-qS-CIt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZoQ-Pn-EPb">
+                <tableViewController id="Zce-wD-jpR" customClass="MenuTableViewController" customModule="MobileWaiter_CS481" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9VG-W2-XH1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="weQ-fd-BjJ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="MenuIcon" id="HNb-7n-Dw3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b0q-ov-XE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Tue-1p-zMq">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tue-1p-zMq" id="Kdi-nY-whI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Zce-wD-jpR" id="Rty-jh-LfB"/>
+                            <outlet property="delegate" destination="Zce-wD-jpR" id="GKq-bq-02f"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Menu" image="MenuIcon" id="hEC-KF-ctG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYw-DS-XAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="947.82608695652186" y="1713.6160714285713"/>
+            <point key="canvasLocation" x="948" y="1714"/>
         </scene>
         <!--Check Out-->
         <scene sceneID="4Kt-9y-nSV">
@@ -218,10 +231,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Vay-cE-zad" kind="relationship" relationship="viewControllers" id="FTA-Uc-XWf"/>
-                        <segue destination="Btd-qS-CIt" kind="relationship" relationship="viewControllers" id="rsE-yx-4YX"/>
-                        <segue destination="j8C-4b-RZN" kind="relationship" relationship="viewControllers" id="fBG-Yf-F03"/>
-                        <segue destination="Rku-Y6-d2r" kind="relationship" relationship="viewControllers" id="3zX-Kf-geb"/>
+                        <segue destination="Vay-cE-zad" kind="relationship" relationship="viewControllers" id="cOV-Xh-eWE"/>
+                        <segue destination="Zce-wD-jpR" kind="relationship" relationship="viewControllers" id="5P7-Fl-224"/>
+                        <segue destination="j8C-4b-RZN" kind="relationship" relationship="viewControllers" id="LtC-n1-f0U"/>
+                        <segue destination="Rku-Y6-d2r" kind="relationship" relationship="viewControllers" id="jtX-RL-25K"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPp-1J-LwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
