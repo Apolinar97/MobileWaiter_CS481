@@ -51,14 +51,15 @@ class TabHeadController: UITabBarController {
                 restaurantViewController.restaurantInstance = restaurantObj
             }
             
-            if let menuTableVC = viewController as? MenuTableViewController {
-                prepMenuItems(vc: menuTableVC)
+            if let menuViewController = viewController as? MenuController {
+                prepMenuItems(vc: menuViewController)
             }
+            
             
         }
     }
     
-    func prepMenuItems(vc:MenuTableViewController) {
+    func prepMenuItems(vc:MenuController) {
         var menuItems = Array<MenuItem>()
         let menuRef = Firestore.firestore().collection("Menus")
         menuRef.whereField("RestaurantID", isEqualTo: setRestID()).getDocuments(){ (snapShot,error) in
@@ -73,15 +74,16 @@ class TabHeadController: UITabBarController {
                     let item:MenuItem = MenuItem()
                     //print("\(document.documentID) => \(document.data())")
                     item.docID = document.documentID as String
+                    item.itemPrice = Float(truncating: document.get("ItemPrice") as! NSNumber)
                     item.MenuID = document.get("MenuID") as! Int
                     item.restaurantID = document.get("RestaurantID") as! Int
                     item.itemDescription = document.get("ItemDescription") as! String
                     item.itemName = document.get("ItemName") as! String
+                    item.itemType = document.get("ItemType") as! String
                     
                     menuItems.append(item)
                     
                 }
-                //vc.menuItemsList = menuItems
                 vc.menuItemsList = menuItems
             }
             
@@ -91,7 +93,7 @@ class TabHeadController: UITabBarController {
     }
     
     
-    
+   
     
     
 }

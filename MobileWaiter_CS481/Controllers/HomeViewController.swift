@@ -37,6 +37,8 @@ class HomeViewController: UIViewController {
         }
         
         let db = Firestore.firestore()
+        
+        
         let id: Int? = Int(IDTextField.text!)
         
         

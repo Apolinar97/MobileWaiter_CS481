@@ -15,8 +15,30 @@ class RestaurantController: UIViewController {
     var restaurantInstance:Restaurant?
     var menuItemsInstance = Array<MenuItem>()
     
+    
+    @IBOutlet weak var notificationLabel: UILabel!
+    
+    
+    //Note:     Since there is not Restaurant web client, this method will only
+    //          Update the notification label.
+    
+    //          Possible implementation could that this method sends a notification to a waiter
+    //          via a restaurant web client.
+    @IBAction func checkInTapped(_ sender: UIButton) {
+        
+        notificationLabel.textColor = UIColor.green
+        notificationLabel.text = "Staff notified"
+        
+    }
+    
+    @IBAction func vacateTapped(_ sender: UIButton) {
+        notificationLabel.textColor = UIColor.red
+        notificationLabel.text = "Come again!"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        notificationLabel.text = nil
         setRestaurantLabel()
         printMenuItems()
         
