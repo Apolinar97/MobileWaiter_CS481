@@ -11,7 +11,7 @@ import FirebaseUI
 import Firebase
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var LogInButton: UIButton!
     
     
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func logInTapped(_ sender: UIButton) {
         let authUI = FUIAuth.defaultAuthUI()
         
@@ -44,9 +44,11 @@ extension ViewController: FUIAuthDelegate {
             return
         }
         
-        let userID:String = authDataResult!.user.uid;
-        print("The userID is" + userID);
-                
+        //let userID:String = authDataResult!.user.uid;
+        //Store new user acconts to firebase.
+        //print("The userID is" + userID);
+        
+        //let userRef = Firestore.firestore().collection("Users").document(userID)
         
         performSegue(withIdentifier: "goHome", sender: self)
     }

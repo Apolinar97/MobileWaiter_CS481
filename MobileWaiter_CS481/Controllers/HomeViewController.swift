@@ -13,10 +13,11 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var IDTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCurrentUserInDB()
         
         // Do any additional setup after loading the view.
     }
@@ -25,7 +26,7 @@ class HomeViewController: UIViewController {
         if(segue.identifier == "goTest") {
             let destVC = segue.destination as! TabHeadController
             destVC.restaurantObj = sender as? Restaurant
-
+            
         }
     }
     
@@ -42,6 +43,7 @@ class HomeViewController: UIViewController {
         let id: Int? = Int(IDTextField.text!)
         
         
+        
         db.collection("Restaurants").whereField("RestaurantID",isEqualTo: id!).getDocuments() {(snapshot,error) in
             if error != nil {
                 print("Error")
@@ -55,23 +57,23 @@ class HomeViewController: UIViewController {
                 //For Demo Purposes
                 
                 let restaurant:Restaurant = Restaurant()
-
+                
                 for document in snapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     
                     restaurant.id = document.get("RestaurantID") as! Int
                     restaurant.name = document.get("RestaurantName") as! String
-
+                    
                 }
                 
                 
                 self.performSegue(withIdentifier: "goTest", sender: restaurant)
-
+                
             }
             
             
         }
-    
+        
     }
     
     
@@ -79,6 +81,40 @@ class HomeViewController: UIViewController {
     
     @IBAction func goNextTapped(_ sender: UIButton) {
         validateRestuarant()
+    }
+    
+    func setCurrentUserInDB() {
+        guard let currentUserID = Auth.auth().currentUser?.uid else {
+            return
+        }
+        //print("the current user id is: " + currentUserID)
+        let userDocRef = Firestore.firestore().collection("Users").document(currentUserID)
+        
+        userDocRef.getDocument() { (document,error) in
+            if let document = document, document.exists {
+                //doc exists, no need to write more data
+                print("Doc exists")
+                return
+            }
+            else {
+                print("Doc does! exist")
+                
+                guard let currentUserName = Auth.auth().currentUser?.displayName else {
+                    return
+                }
+                guard let  currentUserEmail = Auth.auth().currentUser?.email  else {
+                    return
+                }
+               
+                
+                userDocRef.setData( ["UserName": currentUserName,
+                                     "UserEmail": currentUserEmail] )
+            }
+        }
+        
+        
+        
+        
     }
     
     

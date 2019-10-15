@@ -22,11 +22,11 @@ class MenuController: UIViewController {
         tableView.dataSource = self
         
     }
-
+    
     @IBAction func confirmTapped(_ sender: UIButton) {
         //let db = Firestore.firestore()
-        //let orderDetails = setOrderDetails()
-        //db.collection("OrderDetails")
+        let orderDetails = setOrderDetails()
+        performSegue(withIdentifier: "checkOut", sender: orderDetails)
         
     }
     
@@ -37,8 +37,13 @@ class MenuController: UIViewController {
             targetController.selectedItem = sender as? MenuItem
             
         }
+        if(segue.identifier == "checkOut") {
+            let destNavVC = segue.destination as! CheckOutNavController
+            let targetController = destNavVC.topViewController as! CheckOutController
+            targetController.orderDetails = sender as? OrderDetails
+        }
     }
-   
+    
     
 }
 
@@ -74,12 +79,14 @@ extension MenuController: UITableViewDataSource, UITableViewDelegate {
         
         for cell in cells {
             
-            let currentItem = menuItemsList![i]
             let selectedCell = cell as! MenuViewCell
-            orderItems.menuItems.append(currentItem)
-            orderItems.itemCount.append(Float(selectedCell.stepperRef!.value))
             
-                        
+            if(!(selectedCell.stepperRef!.value.isZero)) {                
+                let currentItem = menuItemsList![i]
+                orderItems.menuItems.append(currentItem)
+                orderItems.itemCount.append(selectedCell.stepperRef!.value)
+            }
+            
             i+=1
         }
         orderItems.restaurantID = menuItemsList![i-1].restaurantID

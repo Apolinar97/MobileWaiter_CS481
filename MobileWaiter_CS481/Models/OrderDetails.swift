@@ -13,7 +13,7 @@ class OrderDetails {
     var userID:String = ""
     var restaurantID:Int = -1
     var menuItems:Array<MenuItem> = Array()
-    var itemCount:Array<Float> = Array()
+    var itemCount:Array<Double> = Array()
     var timeStamp:NSDate = NSDate.init()
     init() {}
     

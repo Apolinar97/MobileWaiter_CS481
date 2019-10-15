@@ -13,12 +13,12 @@ class MenuItem {
     var restaurantID:Int = -1
     var docID:String = ""
     var itemName:String = ""
-    var itemPrice:Float = -1.0
+    var itemPrice:Double = -1.0
     var flags:[String] = [String]() //Contains flags such as spicy,
     var itemDescription:String = ""
     var itemType:String = ""
     
-    init(itemName:String,flags:[String], itemDescription:String, restaurantID:Int, docID:String, itemPrice:Float) {
+    init(itemName:String,flags:[String], itemDescription:String, restaurantID:Int, docID:String, itemPrice:Double) {
         self.itemName = itemName
         self.flags = flags
         self.itemDescription = itemDescription

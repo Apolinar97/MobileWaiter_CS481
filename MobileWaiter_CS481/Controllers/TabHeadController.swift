@@ -15,6 +15,7 @@ import UIKit
 class TabHeadController: UITabBarController {
     var restaurantObj:Restaurant?
     var menuItems:Array<MenuItem>?
+    var OrderItemsDetails:Array<OrderDetails>?
     
     let RestVC = RestaurantController()
     
@@ -53,7 +54,10 @@ class TabHeadController: UITabBarController {
             
             if let menuViewController = viewController as? MenuController {
                 prepMenuItems(vc: menuViewController)
+                
             }
+            
+           
             
             
         }
@@ -74,7 +78,8 @@ class TabHeadController: UITabBarController {
                     let item:MenuItem = MenuItem()
                     //print("\(document.documentID) => \(document.data())")
                     item.docID = document.documentID as String
-                    item.itemPrice = Float(truncating: document.get("ItemPrice") as! NSNumber)
+                    //item.itemPrice = Float(truncating: document.get("ItemPrice") as! NSNumber)
+                    item.itemPrice = document.get("ItemPrice") as! Double
                     item.MenuID = document.get("MenuID") as! Int
                     item.restaurantID = document.get("RestaurantID") as! Int
                     item.itemDescription = document.get("ItemDescription") as! String
