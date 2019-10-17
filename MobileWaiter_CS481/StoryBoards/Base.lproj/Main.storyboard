@@ -462,11 +462,22 @@
                                     <action selector="payBillTapped:" destination="6mZ-aH-Bij" eventType="touchUpInside" id="jjE-OI-kuq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrJ-q3-Y1S" userLabel="confirmLabel">
+                                <rect key="frame" x="12" y="768" width="97" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="hmt-Vz-HA7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="k4V-TP-cN2" firstAttribute="top" secondItem="Z5D-0c-1Fj" secondAttribute="top" id="0nh-rd-u2z"/>
                             <constraint firstItem="D7m-Bf-MEO" firstAttribute="bottom" secondItem="WfI-Kd-cJw" secondAttribute="bottom" id="7YH-0y-cG2"/>
+                            <constraint firstItem="BrJ-q3-Y1S" firstAttribute="top" secondItem="Z5D-0c-1Fj" secondAttribute="bottom" constant="26" id="Az9-Ul-Tfb"/>
+                            <constraint firstItem="BrJ-q3-Y1S" firstAttribute="leading" secondItem="Z5D-0c-1Fj" secondAttribute="leading" id="BUR-PF-kGg"/>
                             <constraint firstItem="cWL-k0-4bT" firstAttribute="leading" secondItem="WfI-Kd-cJw" secondAttribute="leading" id="GkC-rP-dni"/>
                             <constraint firstItem="Z5D-0c-1Fj" firstAttribute="centerY" secondItem="EMc-X8-0dJ" secondAttribute="centerY" constant="288" id="LNx-Yj-gqr"/>
                             <constraint firstItem="cWL-k0-4bT" firstAttribute="top" secondItem="WfI-Kd-cJw" secondAttribute="top" id="M18-0P-Dik"/>
@@ -482,6 +493,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Rnu-vc-nCC"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="confirmLabel" destination="BrJ-q3-Y1S" id="C6A-cJ-uuh"/>
                         <outlet property="payButtonRef" destination="D7m-Bf-MEO" id="NPs-T1-2aA"/>
                         <outlet property="tableView" destination="cWL-k0-4bT" id="OR2-Yi-WSy"/>
                         <outlet property="tipPercentageLabel" destination="Dfz-RG-qe6" id="Sou-oa-I0b"/>

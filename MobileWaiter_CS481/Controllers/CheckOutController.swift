@@ -29,6 +29,7 @@ class CheckOutController: UIViewController {
     
     @IBOutlet weak var payButtonRef: UIButton!
     
+    @IBOutlet weak var confirmLabel: UILabel!
     
     
     var totalPrice:Double = 0.0
@@ -39,9 +40,10 @@ class CheckOutController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
-        
+        confirmLabel.text = ""
         calculateTotalPrice()
         setTotalBeforeTip()
         
@@ -63,6 +65,8 @@ class CheckOutController: UIViewController {
         }
         
         payButtonRef.isEnabled = false
+        
+        confirmLabel.text = "Thank you"
         //Get itemNames and itemPrices from orderDetails. 
         let itemName = helper.getItemNameFromArray(menuItems: orderDetails.menuItems)
         let itemPrices = helper.getItemPriceFromArray(menuItems: orderDetails.menuItems)

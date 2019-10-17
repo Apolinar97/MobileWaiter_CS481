@@ -205,7 +205,6 @@
 				EE5463D223382D62003F29F1 /* GoogleService-Info.plist */,
 				EE5463B023382CC2003F29F1 /* Info.plist */,
 				EEA3175C23554E33001A4B51 /* CheckOutHelper.swift */,
-				EE2F3AFE2357E384008EE389 /* MyAccountController.swift */,
 				EE12AF122358014E005DADA3 /* PastOrdersViewController.swift */,
 			);
 			path = MobileWaiter_CS481;
@@ -232,6 +231,7 @@
 		EE87C61823543181004D386D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE2F3AFE2357E384008EE389 /* MyAccountController.swift */,
 				EE87C61623541ECF004D386D /* MenuController.swift */,
 				EEA3175623552F03001A4B51 /* CheckOutController.swift */,
 				EEA0A932234331A50012E94D /* TabHeadController.swift */,
