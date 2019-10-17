@@ -7,10 +7,10 @@ Implemented for CS481 midterm.
 
 
 ## Software Used
-Xcode: Framework used to build a native ios Application
-Firebase: Used as database server and user authentication
-Cocoapods: Dependency Manager
-Swift: Programming language used.
+* Xcode: Framework used to build a native ios Application
+* Firebase: Used as database server and user authentication
+* Cocoapods: Dependency Manager
+* Swift: Programming language used.
 
 ## Incomplete Features
 ###### Feature One
