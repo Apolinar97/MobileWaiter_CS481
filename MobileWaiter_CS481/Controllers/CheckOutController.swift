@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 //MARK:Create money type, as project progresses.
 
 
@@ -25,6 +26,8 @@ class CheckOutController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var payButtonRef: UIButton!
     
     
     
@@ -45,7 +48,39 @@ class CheckOutController: UIViewController {
     }
     
     
-
+    @IBAction func payBillTapped(_ sender: UIButton) {
+        
+        let orderRef = Firestore.firestore().collection("OrderDetails")
+        guard let orderDetails = orderDetails else {
+            return
+        }
+        
+        if(!helper.ifOrdered(countArray: orderDetails.itemCount)) {
+            //show label that no orders were made.
+            print("No orders")
+            return
+            
+        }
+        
+        payButtonRef.isEnabled = false
+        //Get itemNames and itemPrices from orderDetails. 
+        let itemName = helper.getItemNameFromArray(menuItems: orderDetails.menuItems)
+        let itemPrices = helper.getItemPriceFromArray(menuItems: orderDetails.menuItems)
+        
+        orderRef.addDocument(data: ["UserID":orderDetails.userID,
+                                    "TimeStamp":Timestamp.init(),
+                                    "QuantOrdered":orderDetails.itemCount,
+                                    "ItemOrdered":itemName,
+                                    "ItemPrices": itemPrices,
+                                    "TotalAmount":totalPrice,
+            "RestaurantID":orderDetails.restaurantID])
+        
+        
+        
+        
+      
+    }
+    
     func calculateTotalPrice() {
         guard let orderDetails = orderDetails else {
             return
@@ -66,7 +101,7 @@ class CheckOutController: UIViewController {
     }
     
     func calculateTotalPriceWithTip() {
-      
+        
         if(tipStepperRef.value.isZero) {
             totalPrice = priceBeforeTip
         }

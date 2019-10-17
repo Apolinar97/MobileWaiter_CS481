@@ -10,6 +10,9 @@
 		53FE527381A4EF3BEEE90B36 /* Pods_MobileWaiter_CS481.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AE6F51AA103DA05E65ED2D /* Pods_MobileWaiter_CS481.framework */; };
 		6B65A00966DFD1EA3FAFEC6A /* Pods_MobileWaiter_CS481UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA59F583FF03620A51C9013 /* Pods_MobileWaiter_CS481UITests.framework */; };
 		7BF483821BA6A426F7D87097 /* Pods_MobileWaiter_CS481Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7FEE559431AC32A63D2C54 /* Pods_MobileWaiter_CS481Tests.framework */; };
+		EE12AF112357FD27005DADA3 /* PastOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12AF102357FD27005DADA3 /* PastOrder.swift */; };
+		EE12AF132358014E005DADA3 /* PastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12AF122358014E005DADA3 /* PastOrdersViewController.swift */; };
+		EE2F3AFF2357E384008EE389 /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2F3AFE2357E384008EE389 /* MyAccountController.swift */; };
 		EE5463A323382CC1003F29F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463A223382CC1003F29F1 /* AppDelegate.swift */; };
 		EE5463A523382CC1003F29F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463A423382CC1003F29F1 /* SceneDelegate.swift */; };
 		EE5463A723382CC1003F29F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5463A623382CC1003F29F1 /* ViewController.swift */; };
@@ -68,6 +71,9 @@
 		D8AE6F51AA103DA05E65ED2D /* Pods_MobileWaiter_CS481.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWaiter_CS481.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC67747D33F821B317E20EF2 /* Pods-MobileWaiter_CS481Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWaiter_CS481Tests.release.xcconfig"; path = "Target Support Files/Pods-MobileWaiter_CS481Tests/Pods-MobileWaiter_CS481Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EC7FEE559431AC32A63D2C54 /* Pods_MobileWaiter_CS481Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWaiter_CS481Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE12AF102357FD27005DADA3 /* PastOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrder.swift; sourceTree = "<group>"; };
+		EE12AF122358014E005DADA3 /* PastOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrdersViewController.swift; sourceTree = "<group>"; };
+		EE2F3AFE2357E384008EE389 /* MyAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
 		EE54639F23382CC1003F29F1 /* MobileWaiter_CS481.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileWaiter_CS481.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5463A223382CC1003F29F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE5463A423382CC1003F29F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 				EE5463D223382D62003F29F1 /* GoogleService-Info.plist */,
 				EE5463B023382CC2003F29F1 /* Info.plist */,
 				EEA3175C23554E33001A4B51 /* CheckOutHelper.swift */,
+				EE2F3AFE2357E384008EE389 /* MyAccountController.swift */,
+				EE12AF122358014E005DADA3 /* PastOrdersViewController.swift */,
 			);
 			path = MobileWaiter_CS481;
 			sourceTree = "<group>";
@@ -224,8 +232,8 @@
 		EE87C61823543181004D386D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EEA3175623552F03001A4B51 /* CheckOutController.swift */,
 				EE87C61623541ECF004D386D /* MenuController.swift */,
+				EEA3175623552F03001A4B51 /* CheckOutController.swift */,
 				EEA0A932234331A50012E94D /* TabHeadController.swift */,
 				EEF5E2A223544FD200D949D9 /* ItemInfoController.swift */,
 				EE5463A623382CC1003F29F1 /* ViewController.swift */,
@@ -244,6 +252,7 @@
 				EEA0A92A2339B1BD0012E94D /* MenuItem.swift */,
 				EEA0A92C2339B5150012E94D /* Menu.swift */,
 				EEA3175423546B4F001A4B51 /* OrderDetails.swift */,
+				EE12AF102357FD27005DADA3 /* PastOrder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -513,11 +522,14 @@
 				EE5463A723382CC1003F29F1 /* ViewController.swift in Sources */,
 				EEA0A9292339AFD50012E94D /* Table.swift in Sources */,
 				EE9AF558235573C400A77941 /* CheckOutViewCell.swift in Sources */,
+				EE12AF132358014E005DADA3 /* PastOrdersViewController.swift in Sources */,
 				EE5463A323382CC1003F29F1 /* AppDelegate.swift in Sources */,
+				EE12AF112357FD27005DADA3 /* PastOrder.swift in Sources */,
 				EEF5E2A52354540D00D949D9 /* ItemInfoNavigationController.swift in Sources */,
 				EE87C615234D39D3004D386D /* MenuViewCell.swift in Sources */,
 				EEF5E2A323544FD200D949D9 /* ItemInfoController.swift in Sources */,
 				EEA0A9272339AB2A0012E94D /* Restaurant.swift in Sources */,
+				EE2F3AFF2357E384008EE389 /* MyAccountController.swift in Sources */,
 				EEA3175723552F03001A4B51 /* CheckOutController.swift in Sources */,
 				EEA0A92F23432BAC0012E94D /* RestaurantController.swift in Sources */,
 				EE5463A523382CC1003F29F1 /* SceneDelegate.swift in Sources */,

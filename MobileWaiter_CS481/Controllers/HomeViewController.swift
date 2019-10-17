@@ -108,7 +108,8 @@ class HomeViewController: UIViewController {
                
                 
                 userDocRef.setData( ["UserName": currentUserName,
-                                     "UserEmail": currentUserEmail] )
+                                     "UserEmail": currentUserEmail,
+                                     "UserID": Auth.auth().currentUser!.uid] )
             }
         }
         

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Firebase
 class MenuItem {
     var MenuID:Int = -1
     var restaurantID:Int = -1
@@ -17,6 +17,7 @@ class MenuItem {
     var flags:[String] = [String]() //Contains flags such as spicy,
     var itemDescription:String = ""
     var itemType:String = ""
+    var orderDate:Timestamp = Timestamp()
     
     init(itemName:String,flags:[String], itemDescription:String, restaurantID:Int, docID:String, itemPrice:Double) {
         self.itemName = itemName
